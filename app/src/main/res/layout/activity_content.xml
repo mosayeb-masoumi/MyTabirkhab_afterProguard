@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/AppTheme" >
+
+        <ImageView
+            android:id="@+id/icon_arrow_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@mipmap/ic_arrow_back"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/title_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="16dip"
+            android:gravity="right"
+            tools:text="متن"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/font_size_big" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/icon_favorite"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="11dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/icon_share"
+                android:layout_toStartOf="@+id/icon_share"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_emptyheart" />
+
+            <ImageView
+                android:id="@+id/icon_share"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignEnd="@+id/txt_content"
+                android:layout_alignRight="@+id/txt_content"
+                android:layout_alignTop="@+id/icon_favorite"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="13dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_share" />
+
+            <TextView
+                android:id="@+id/txt_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="#000000"
+                android:textSize="@dimen/font_size_big"
+                tools:text="متن"
+                android:gravity="right"
+                android:layout_below="@+id/icon_share"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <ir.tapsell.sdk.bannerads.TapsellBannerView
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        app:tapsell_banner_type="banner_320x50"
+        app:tapsell_zone_id="5bc6df5156e3c70001ff4bcb"/>
+</RelativeLayout>
+

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tornado.taabirkhab.MainActivity">
+
+   <android.support.v7.widget.Toolbar
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/colorPrimary"
+       app:theme="@style/AppTheme"
+       android:id="@+id/toolbar2">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_above="@+id/scrollView2"
+           android:layout_alignParentEnd="true"
+           android:layout_alignParentRight="true"
+           android:layout_marginBottom="11dp"
+           android:orientation="horizontal">
+
+           <TextView
+               android:id="@+id/title_toolbar"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_centerVertical="true"
+               android:layout_marginEnd="11dp"
+               android:layout_marginRight="11dp"
+               android:layout_toLeftOf="@+id/imagview_toolbar"
+               android:layout_toStartOf="@+id/imagview_toolbar"
+               android:text="تعبیر خواب"
+               android:textColor="#fff"
+               android:textSize="16dp" />
+
+           <ImageView
+               android:id="@+id/imagview_toolbar"
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_alignParentEnd="true"
+               android:layout_alignParentRight="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginRight="5dp"
+               android:src="@drawable/ic_dream" />
+
+           <ImageView
+               android:id="@+id/img_menu_more"
+               android:layout_width="32dp"
+               android:layout_height="32dp"
+               android:layout_alignParentLeft="true"
+               android:layout_gravity="left"
+               android:layout_marginLeft="1dp"
+               android:src="@mipmap/ic_menu_more" />
+
+           <ImageView
+               android:id="@+id/img_share3"
+               android:layout_width="32dp"
+               android:layout_height="32dp"
+               android:layout_alignParentTop="true"
+               android:layout_gravity="left"
+               android:layout_marginLeft="11dp"
+               android:layout_marginStart="11dp"
+               android:layout_toEndOf="@+id/img_menu_more"
+               android:layout_toRightOf="@+id/img_menu_more"
+               android:src="@drawable/ic_share3" />
+
+
+       </RelativeLayout>
+
+   </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar2"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/wallpaper_moon"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="3dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/backgroung" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/card_favorite">
+
+
+            <TextView
+                    android:id="@+id/txt_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_margin="15dp"
+                    android:text="ورود به تعبیر خواب"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/font_size_big" />
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    android:src="@drawable/dream2" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/card_list">
+
+                <TextView
+                    android:id="@+id/txt_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="علاقه مندی ها"
+                    android:layout_gravity="right"
+                    android:layout_margin="15dp"
+                    android:textSize="@dimen/font_size_big"
+                    android:textColor="#000000"
+                    />
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/favourites2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/card_favorite">
+
+                <TextView
+                    android:id="@+id/txt_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="نظر به برنامه"
+                    android:layout_gravity="right"
+                    android:layout_margin="15dp"
+                    android:textSize="@dimen/font_size_big"
+                    android:textColor="#000000"
+                    />
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:src="@drawable/opinion2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2dp"
+                    />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <ir.tapsell.sdk.bannerads.TapsellBannerView
+        android:id="@+id/banner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"
+        app:tapsell_banner_type="banner_320x50"
+        app:tapsell_zone_id="5bc6df5156e3c70001ff4bcb"/>
+
+</RelativeLayout>
